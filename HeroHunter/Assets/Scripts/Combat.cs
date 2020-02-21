@@ -19,6 +19,10 @@ public class Combat : MonoBehaviour
     public GameObject buttonTwo;
     public bool enemyDead;
 
+    private IEnumerator loseRoutine;
+    private IEnumerator winRoutine;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +36,8 @@ public class Combat : MonoBehaviour
             buttonOne.SetActive(false);
             buttonTwo.SetActive(false);
             GetComponent<Animator>().SetTrigger("die");
+            deathRoutine = deathTimer(2.0f);
+            StartCoroutine(deathRoutine);
         }
     }
 
@@ -58,6 +64,8 @@ public class Combat : MonoBehaviour
             buttonOne.SetActive(false);
             buttonTwo.SetActive(false);
             enemyGO.GetComponent<Animator>().SetTrigger("die");
+            winRoutine = winTimer(2.0f);
+            StartCoroutine(winRoutine);
         }
         else{
             coroutine = EnemyAttack(2.0f);
@@ -72,7 +80,7 @@ public class Combat : MonoBehaviour
         playerRoll = Random.Range(1,11);
         Debug.Log("Flee attempt " + playerRoll);
         if (playerRoll % 2 == 0){
-            Debug.Log("Flee");
+            SceneManager.LoadScene(1);
         }
     }
 
@@ -91,5 +99,14 @@ public class Combat : MonoBehaviour
             Debug.Log("Full resist");
         }
         pressed = false;
+    }
+    
+    private IEnumerator deathTimer(float waitTime){
+        yield return new WaitForSeconds(waitTime);
+        SceneManager.LoadScene(1);
+    }
+    private IEnumerator winTimer(float waitTime){
+        yield return new WaitForSeconds(waitTime);
+        SceneManager.LoadScene(1);
     }
 }
