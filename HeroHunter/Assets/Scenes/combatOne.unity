@@ -1353,6 +1353,10 @@ MonoBehaviour:
   healthBar: {fileID: 1147305965}
   enemyhealth: 100
   enemyhealthBar: {fileID: 1898566184}
+  enemyGO: {fileID: 840771036}
+  pressed: 0
+  buttonOne: {fileID: 705674394}
+  buttonTwo: {fileID: 851290826}
 --- !u!1 &1617950458
 GameObject:
   m_ObjectHideFlags: 0
