@@ -17,7 +17,7 @@ public class Combat : MonoBehaviour
     public bool pressed = false;
     public GameObject buttonOne;
     public GameObject buttonTwo;
-
+    public bool enemyDead;
 
     // Start is called before the first frame update
     void Start()
@@ -28,13 +28,11 @@ public class Combat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
         if (healthBar.value <= 0){
             buttonOne.SetActive(false);
             buttonTwo.SetActive(false);
             GetComponent<Animator>().SetTrigger("die");
         }
-        */
     }
 
     public void AttackButton(){
@@ -55,8 +53,8 @@ public class Combat : MonoBehaviour
             //Instantiate(Resources.Load("Blood"), other.transform.position, other.transform.rotation);
         }
         pressed = true;
-        /*
         if (enemyhealthBar.value <= 0){
+            enemyDead = true;
             buttonOne.SetActive(false);
             buttonTwo.SetActive(false);
             enemyGO.GetComponent<Animator>().SetTrigger("die");
@@ -65,9 +63,8 @@ public class Combat : MonoBehaviour
             coroutine = EnemyAttack(2.0f);
             StartCoroutine(coroutine);
         }
-        */
-        coroutine = EnemyAttack(2.0f);
-        StartCoroutine(coroutine);
+        //coroutine = EnemyAttack(2.0f);
+        //StartCoroutine(coroutine);
     }
 
     public void FleeButton(){
