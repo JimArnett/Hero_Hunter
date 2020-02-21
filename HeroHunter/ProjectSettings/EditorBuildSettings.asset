@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/grassE.unity
     guid: a640480d6649048159930c02d1a61668
+  - enabled: 1
+    path: Assets/Scenes/combatOne.unity
+    guid: ae628a9c820a5455eb7f60b6022d89c0
   m_configObjects: {}
