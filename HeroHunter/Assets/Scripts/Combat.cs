@@ -36,8 +36,8 @@ public class Combat : MonoBehaviour
             buttonOne.SetActive(false);
             buttonTwo.SetActive(false);
             GetComponent<Animator>().SetTrigger("die");
-            deathRoutine = deathTimer(2.0f);
-            StartCoroutine(deathRoutine);
+            loseRoutine = deathTimer(2.0f);
+            StartCoroutine(loseRoutine);
         }
     }
 
