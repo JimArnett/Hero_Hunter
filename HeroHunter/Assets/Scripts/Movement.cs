@@ -34,7 +34,7 @@ public class Movement : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.UpArrow)) // checks if player presss up arrow key
             {
 
-                rb.AddForce(Vector2.up * 6, ForceMode2D.Impulse); // makes player jump
+                rb.AddForce(Vector2.up * 5, ForceMode2D.Impulse); // makes player jump
                 onGround = false;
 
 
