@@ -10,6 +10,7 @@ TagManager:
   - parents
   - door
   - knight
+  - king
   layers:
   - Default
   - TransparentFX

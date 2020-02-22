@@ -4,13 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Combat : MonoBehaviour
+public class KingCombat : MonoBehaviour
 {
 
     public int playerRoll;
     public int health = 100;
     public Slider healthBar;
-    public int enemyhealth = 100;
+    public int enemyhealth = 150;
     public Slider enemyhealthBar;
     public GameObject enemyGO;
     private IEnumerator coroutine;
@@ -89,10 +89,10 @@ public class Combat : MonoBehaviour
     
     private IEnumerator deathTimer(float waitTime){
         yield return new WaitForSeconds(waitTime);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
     }
     private IEnumerator winTimer(float waitTime){
         yield return new WaitForSeconds(waitTime);
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(5);
     }
 }
