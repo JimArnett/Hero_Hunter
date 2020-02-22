@@ -16,7 +16,6 @@ public class Combat : MonoBehaviour
     private IEnumerator coroutine;
     public bool pressed = false;
     public GameObject buttonOne;
-    public GameObject buttonTwo;
     public bool enemyDead;
 
     private IEnumerator loseRoutine;
@@ -73,15 +72,6 @@ public class Combat : MonoBehaviour
         }
         //coroutine = EnemyAttack(2.0f);
         //StartCoroutine(coroutine);
-    }
-
-    public void FleeButton(){
-        //Did 11 to make it not a 50 / 50 flee
-        playerRoll = Random.Range(1,11);
-        Debug.Log("Flee attempt " + playerRoll);
-        if (playerRoll % 2 == 0){
-            SceneManager.LoadScene(1);
-        }
     }
 
     private IEnumerator EnemyAttack(float waitTime){
