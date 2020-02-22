@@ -33,7 +33,6 @@ public class Combat : MonoBehaviour
     {
         if (healthBar.value <= 0){
             buttonOne.SetActive(false);
-            buttonTwo.SetActive(false);
             GetComponent<Animator>().SetTrigger("die");
             loseRoutine = deathTimer(2.0f);
             StartCoroutine(loseRoutine);
@@ -61,7 +60,6 @@ public class Combat : MonoBehaviour
         if (enemyhealthBar.value <= 0){
             enemyDead = true;
             buttonOne.SetActive(false);
-            buttonTwo.SetActive(false);
             enemyGO.GetComponent<Animator>().SetTrigger("die");
             winRoutine = winTimer(2.0f);
             StartCoroutine(winRoutine);
