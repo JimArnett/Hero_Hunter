@@ -21,6 +21,7 @@ public class KingCombat : MonoBehaviour
     private IEnumerator loseRoutine;
     private IEnumerator winRoutine;
 
+    public AudioSource attackSound;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,8 @@ public class KingCombat : MonoBehaviour
     }
 
     public void AttackButton(){
+        attackSound.Play();
+
         playerRoll = Random.Range(1,12);
         Debug.Log(playerRoll);
         if (1 <= playerRoll && playerRoll <= 4 && pressed == false){
