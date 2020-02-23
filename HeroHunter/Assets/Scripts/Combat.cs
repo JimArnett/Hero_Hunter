@@ -16,7 +16,6 @@ public class Combat : MonoBehaviour
     private IEnumerator coroutine;
     public bool pressed = false;
     public GameObject buttonOne;
-    public GameObject buttonTwo;
     public bool enemyDead;
 
     private IEnumerator loseRoutine;
@@ -34,7 +33,6 @@ public class Combat : MonoBehaviour
     {
         if (healthBar.value <= 0){
             buttonOne.SetActive(false);
-            buttonTwo.SetActive(false);
             GetComponent<Animator>().SetTrigger("die");
             loseRoutine = deathTimer(2.0f);
             StartCoroutine(loseRoutine);
@@ -62,7 +60,6 @@ public class Combat : MonoBehaviour
         if (enemyhealthBar.value <= 0){
             enemyDead = true;
             buttonOne.SetActive(false);
-            buttonTwo.SetActive(false);
             enemyGO.GetComponent<Animator>().SetTrigger("die");
             winRoutine = winTimer(2.0f);
             StartCoroutine(winRoutine);
@@ -70,17 +67,6 @@ public class Combat : MonoBehaviour
         else{
             coroutine = EnemyAttack(2.0f);
             StartCoroutine(coroutine);
-        }
-        //coroutine = EnemyAttack(2.0f);
-        //StartCoroutine(coroutine);
-    }
-
-    public void FleeButton(){
-        //Did 11 to make it not a 50 / 50 flee
-        playerRoll = Random.Range(1,11);
-        Debug.Log("Flee attempt " + playerRoll);
-        if (playerRoll % 2 == 0){
-            SceneManager.LoadScene(1);
         }
     }
 
@@ -107,6 +93,6 @@ public class Combat : MonoBehaviour
     }
     private IEnumerator winTimer(float waitTime){
         yield return new WaitForSeconds(waitTime);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
     }
 }

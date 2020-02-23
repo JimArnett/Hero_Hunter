@@ -9,6 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/grassE.unity
-    guid: a640480d6649048159930c02d1a61668
+    path: Assets/Scenes/Grass1.unity
+    guid: d38f3b6ddd7390f44b717e1122bb426a
+  - enabled: 1
+    path: Assets/Scenes/combatOne.unity
+    guid: ae628a9c820a5455eb7f60b6022d89c0
+  - enabled: 1
+    path: Assets/Scenes/Grass2.unity
+    guid: e4f2dc39363ee8544a1a3d16aabafcbc
+  - enabled: 1
+    path: Assets/Scenes/combatKing.unity
+    guid: fcf629488062b44be8f7916fe07872ed
+  - enabled: 1
+    path: Assets/Scenes/winScene.unity
+    guid: 645edce133efe4a40ba60434a4620855
   m_configObjects: {}

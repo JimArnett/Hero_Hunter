@@ -9,6 +9,8 @@ TagManager:
   - club
   - parents
   - door
+  - knight
+  - king
   layers:
   - Default
   - TransparentFX
