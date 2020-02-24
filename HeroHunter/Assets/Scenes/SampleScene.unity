@@ -1199,6 +1199,7 @@ GameObject:
   - component: {fileID: 741930025}
   - component: {fileID: 741930027}
   - component: {fileID: 741930026}
+  - component: {fileID: 741930028}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1222,8 +1223,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -195, y: 145}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -352, y: 39}
+  m_SizeDelta: {x: 552.34, y: 36.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &741930026
 MonoBehaviour:
@@ -1256,9 +1257,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Testies
-
-'
+  m_Text: "Oh no\u2026 not my family. Who did this? It must have been those knights.
+    I must avenge them\u2026 But where did they keep the family club?..."
 --- !u!222 &741930027
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1267,6 +1267,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 741930024}
   m_CullTransparentMesh: 0
+--- !u!114 &741930028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741930024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &859235638
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3239,7 +3254,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418695267}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -3289,8 +3304,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418695267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.3, y: -2.49, z: 0}
-  m_LocalScale: {x: 0.64114, y: 0.64114, z: 0.64114}
+  m_LocalPosition: {x: 1.461, y: -2.218, z: 0}
+  m_LocalScale: {x: 3.607999, y: 1.186109, z: 0.64114}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -3730,7 +3745,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -3798,7 +3813,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2.17
+      scalar: 1.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -3851,7 +3866,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.28
+      scalar: 0.77
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4548,7 +4563,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.59
+      scalar: 0.64
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -9284,7 +9299,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1

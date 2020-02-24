@@ -5356,6 +5356,7 @@ GameObject:
   - component: {fileID: 1017915617}
   - component: {fileID: 1017915619}
   - component: {fileID: 1017915618}
+  - component: {fileID: 1017915620}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -5379,8 +5380,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -175, y: 241}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -155.2, y: 303.3}
+  m_SizeDelta: {x: 301.84, y: 40.51}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1017915618
 MonoBehaviour:
@@ -5395,7 +5396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0.66433764, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5413,7 +5414,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Knight talking
+  m_Text: 'Knight: You! I thought we had gotten rid of all of you... now you will
+    pay!'
 --- !u!222 &1017915619
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5422,6 +5424,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1017915616}
   m_CullTransparentMesh: 0
+--- !u!114 &1017915620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017915616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1001 &1038338435
 PrefabInstance:
   m_ObjectHideFlags: 0
