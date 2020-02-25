@@ -11,6 +11,12 @@ TagManager:
   - door
   - knight
   - king
+  - pr
+  - pf
+  - ph
+  - ec
+  - ef
+  - er
   layers:
   - Default
   - TransparentFX
