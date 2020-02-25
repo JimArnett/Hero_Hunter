@@ -19,6 +19,8 @@ TagManager:
   - er
   - sign
   - dungeon
+  - closed
+  - opened
   layers:
   - Default
   - TransparentFX

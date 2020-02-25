@@ -13,12 +13,13 @@ public class player : MonoBehaviour
     public GameObject signText;
     public GameObject dungeonText;
     private IEnumerator coroutine;
-    
+    private GameObject closedDoor;
+    private GameObject openedDoor;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        closedDoor = GameObject.FindWithTag("closed");
     }
 
     // Update is called once per frame
@@ -35,6 +36,7 @@ public class player : MonoBehaviour
         if (other.tag == "club"){
             Destroy(club);
             hasClub = true;
+            closedDoor.GetComponent<Animator>().SetTrigger("pleaseOpen");
         }
         if (other.tag == "door" && hasClub){
             SceneManager.LoadScene(1);
