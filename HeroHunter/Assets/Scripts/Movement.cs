@@ -25,12 +25,12 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.LeftArrow)) // checks if player presses left arrow key
         {
-            transform.Translate(-8 * Time.deltaTime, 0, 0); // moves player to the left
+            transform.Translate(-4 * Time.deltaTime, 0, 0); // moves player to the left
             anim.SetBool("isWalking", true);
         }
         if (Input.GetKey(KeyCode.RightArrow)) // checks if oplayer presses right arrow key
         {
-            transform.Translate(8 * Time.deltaTime, 0, 0); // moves player to the right
+            transform.Translate(4 * Time.deltaTime, 0, 0); // moves player to the right
             anim.SetBool("isWalking", true);
         }
         else

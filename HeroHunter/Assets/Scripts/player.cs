@@ -11,6 +11,7 @@ public class player : MonoBehaviour
     public GameObject knightText;
     public GameObject kingText;
     public GameObject signText;
+    public GameObject dungeonText;
     private IEnumerator coroutine;
     
 
@@ -52,6 +53,10 @@ public class player : MonoBehaviour
         {
             signText.SetActive(true);
         }
+        if (other.tag == "dungeon")
+        {
+            dungeonText.SetActive(true);
+        }
     }
     
     private IEnumerator EnemyAttack(float waitTime){
@@ -72,6 +77,10 @@ public class player : MonoBehaviour
         if (other.tag == "sign")
         {
             signText.SetActive(false);
+        }
+        if (other.tag == "dungeon")
+        {
+            dungeonText.SetActive(false);
         }
     }
 }

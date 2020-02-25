@@ -18,6 +18,7 @@ TagManager:
   - ef
   - er
   - sign
+  - dungeon
   layers:
   - Default
   - TransparentFX
