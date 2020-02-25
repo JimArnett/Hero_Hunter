@@ -10,7 +10,9 @@ public class player : MonoBehaviour
     public bool hasClub;
     public GameObject knightText;
     public GameObject kingText;
+    public GameObject signText;
     private IEnumerator coroutine;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +48,10 @@ public class player : MonoBehaviour
             coroutine = KingAttack(2.0f);
             StartCoroutine(coroutine);
         }
+        if (other.tag == "sign")
+        {
+            signText.SetActive(true);
+        }
     }
     
     private IEnumerator EnemyAttack(float waitTime){
@@ -61,6 +67,11 @@ public class player : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other) {
         if (other.tag == "parents"){
             parentText.SetActive(false);
+        }
+
+        if (other.tag == "sign")
+        {
+            signText.SetActive(false);
         }
     }
 }
