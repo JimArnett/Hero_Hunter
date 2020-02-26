@@ -62,7 +62,7 @@ public class Combat : MonoBehaviour
 
     public void AttackButton(){
         attackSound.Play();
-        playerRoll = Random.Range(1,12);
+        playerRoll = Random.Range(1,9);
         Debug.Log(playerRoll);
         if (critCounter < 3 ){
             if (1 <= playerRoll && playerRoll <= 4 && pressed == false){
@@ -76,7 +76,10 @@ public class Combat : MonoBehaviour
                 //Instantiate(Resources.Load("Blood"), other.transform.position, other.transform.rotation);
                 enemyFull.GetComponent<Animator>().SetTrigger("eFull");
                 enemyhealthText.text = enemyhealth + "/100";
+                critCounter += 1;
+                critCounterBar.value = critCounter;
             }
+            /*
             if (10 <= playerRoll && playerRoll <= 12 && pressed == false){
                 enemyhealth -= 20;
                 enemyhealthBar.value = enemyhealth;
@@ -84,8 +87,7 @@ public class Combat : MonoBehaviour
                 enemyCrit.GetComponent<Animator>().SetTrigger("eCrit");
                 enemyhealthText.text = enemyhealth + "/100";
             }
-            critCounter += 1;
-            critCounterBar.value = critCounter;
+            */
         }
         else{
             enemyhealth -= 20;
