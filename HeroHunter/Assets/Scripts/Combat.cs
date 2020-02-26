@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -21,6 +21,8 @@ public class Combat : MonoBehaviour
     public bool isDefending = false;
     public Text healthText;
     public Text enemyhealthText;
+    public int critCounter;
+    public Slider critCounterBar;
 
     private IEnumerator loseRoutine;
     private IEnumerator winRoutine;
@@ -49,6 +51,7 @@ public class Combat : MonoBehaviour
     void Update()
     {
         if (healthBar.value <= 0){
+            healthBar.value = 0;
             buttonOne.SetActive(false);
             buttonTwo.SetActive(false);
             GetComponent<Animator>().SetTrigger("die");
@@ -58,28 +61,40 @@ public class Combat : MonoBehaviour
     }
 
     public void AttackButton(){
-
         attackSound.Play();
         playerRoll = Random.Range(1,12);
         Debug.Log(playerRoll);
-        if (1 <= playerRoll && playerRoll <= 4 && pressed == false){
-            Debug.Log("Resist");
-            //Instantiate(Resources.Load("Blood"), other.transform.position, other.transform.rotation);
-            enemyResist.GetComponent<Animator>().SetTrigger("eResist");
+        if (critCounter < 3 ){
+            if (1 <= playerRoll && playerRoll <= 4 && pressed == false){
+                Debug.Log("Resist");
+                //Instantiate(Resources.Load("Blood"), other.transform.position, other.transform.rotation);
+                enemyResist.GetComponent<Animator>().SetTrigger("eResist");
+            }
+            if (5 <= playerRoll && playerRoll <= 9 && pressed == false){
+                enemyhealth -= 10;
+                enemyhealthBar.value = enemyhealth;
+                //Instantiate(Resources.Load("Blood"), other.transform.position, other.transform.rotation);
+                enemyFull.GetComponent<Animator>().SetTrigger("eFull");
+                enemyhealthText.text = enemyhealth + "/100";
+            }
+            if (10 <= playerRoll && playerRoll <= 12 && pressed == false){
+                enemyhealth -= 20;
+                enemyhealthBar.value = enemyhealth;
+                //Instantiate(Resources.Load("Blood"), other.transform.position, other.transform.rotation);
+                enemyCrit.GetComponent<Animator>().SetTrigger("eCrit");
+                enemyhealthText.text = enemyhealth + "/100";
+            }
+            critCounter += 1;
+            critCounterBar.value = critCounter;
         }
-        if (5 <= playerRoll && playerRoll <= 9 && pressed == false){
-            enemyhealth -= 10;
-            enemyhealthBar.value = enemyhealth;
-            //Instantiate(Resources.Load("Blood"), other.transform.position, other.transform.rotation);
-            enemyFull.GetComponent<Animator>().SetTrigger("eFull");
-            enemyhealthText.text = enemyhealth + "/100";
-        }
-        if (10 <= playerRoll && playerRoll <= 12 && pressed == false){
+        else{
             enemyhealth -= 20;
             enemyhealthBar.value = enemyhealth;
             //Instantiate(Resources.Load("Blood"), other.transform.position, other.transform.rotation);
             enemyCrit.GetComponent<Animator>().SetTrigger("eCrit");
             enemyhealthText.text = enemyhealth + "/100";
+            critCounter = 0;
+            critCounterBar.value = critCounter;
         }
         pressed = true;
         if (enemyhealthBar.value <= 0){
