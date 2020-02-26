@@ -2388,6 +2388,7 @@ GameObject:
   - component: {fileID: 220895519}
   - component: {fileID: 220895521}
   - component: {fileID: 220895520}
+  - component: {fileID: 220895522}
   m_Layer: 5
   m_Name: Sign Text
   m_TagString: Untagged
@@ -2456,6 +2457,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220895518}
   m_CullTransparentMesh: 0
+--- !u!114 &220895522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220895518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
 --- !u!1 &240739975
 GameObject:
   m_ObjectHideFlags: 0
@@ -5727,7 +5743,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.20871
+  orthographic size: 2.785348
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5751,7 +5767,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114532401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.74, y: 0.4, z: -10}
+  m_LocalPosition: {x: -3.74, y: 0.47, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7366,7 +7382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7384,7 +7400,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: there's nothing left but sadness and ash...
+  m_Text: There's nothing left but sadness and ash...
 --- !u!222 &1700331292
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8479,6 +8495,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762518234421683903, guid: 613b50d14fe964eda96c6e81bbfce906,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.11612582
+      objectReference: {fileID: 0}
+    - target: {fileID: 3762518234421683903, guid: 613b50d14fe964eda96c6e81bbfce906,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.2322516
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 613b50d14fe964eda96c6e81bbfce906, type: 3}

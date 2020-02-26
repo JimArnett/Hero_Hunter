@@ -42,6 +42,7 @@ public class player : MonoBehaviour
             club.SetActive(true);
         }
         if (other.tag == "club"){
+            //clubText.SetActive(true);
             pickupSound.Play();
             Destroy(club);
             hasClub = true;
