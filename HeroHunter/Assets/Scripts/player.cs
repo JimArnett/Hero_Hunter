@@ -14,15 +14,14 @@ public class player : MonoBehaviour
     public GameObject dungeonText;
     public GameObject sign2Text;
     private IEnumerator coroutine;
-<<<<<<< HEAD
 
     public AudioSource laughSound;
     public AudioSource laugh2Sound;
+    public AudioSource pickupSound;
+    public AudioSource sadSound;
     
-=======
     private GameObject closedDoor;
     private GameObject openedDoor;
->>>>>>> bc65374573fc82d683b10ba6d736366dde10b140
 
     // Start is called before the first frame update
     void Start()
@@ -38,10 +37,12 @@ public class player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "parents"){
+            sadSound.Play();
             parentText.SetActive(true);
             club.SetActive(true);
         }
         if (other.tag == "club"){
+            pickupSound.Play();
             Destroy(club);
             hasClub = true;
             closedDoor.GetComponent<Animator>().SetTrigger("pleaseOpen");
