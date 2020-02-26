@@ -65,12 +65,12 @@ public class Combat : MonoBehaviour
         playerRoll = Random.Range(1,9);
         Debug.Log(playerRoll);
         if (critCounter < 3 ){
-            if (1 <= playerRoll && playerRoll <= 4 && pressed == false){
+            if (1 <= playerRoll && playerRoll <= 3 && pressed == false){
                 Debug.Log("Resist");
                 //Instantiate(Resources.Load("Blood"), other.transform.position, other.transform.rotation);
                 enemyResist.GetComponent<Animator>().SetTrigger("eResist");
             }
-            if (5 <= playerRoll && playerRoll <= 9 && pressed == false){
+            if (4 <= playerRoll && playerRoll <= 9 && pressed == false){
                 enemyhealth -= 10;
                 enemyhealthBar.value = enemyhealth;
                 //Instantiate(Resources.Load("Blood"), other.transform.position, other.transform.rotation);
@@ -118,6 +118,7 @@ public class Combat : MonoBehaviour
     public void DefenseButton(){
         isDefending = true;
         Debug.Log("Defending");
+        playerResist.GetComponent<Animator>().SetTrigger("pResist");
         pressed = true;
         coroutine = EnemyAttack(2.0f);
         StartCoroutine(coroutine);
