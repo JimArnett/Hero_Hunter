@@ -12,7 +12,11 @@ public class player : MonoBehaviour
     public GameObject kingText;
     public GameObject signText;
     public GameObject dungeonText;
+    public GameObject sign2Text;
     private IEnumerator coroutine;
+
+    public AudioSource laughSound;
+    public AudioSource laugh2Sound;
     
 
     // Start is called before the first frame update
@@ -41,12 +45,14 @@ public class player : MonoBehaviour
         }
         if (other.tag == "knight"){
             knightText.SetActive(true);
-            coroutine = EnemyAttack(2.0f);
+            laughSound.Play();
+            coroutine = EnemyAttack(5.0f);
             StartCoroutine(coroutine);
         }
         if (other.tag == "king"){
+            laugh2Sound.Play();
             kingText.SetActive(true);
-            coroutine = KingAttack(2.0f);
+            coroutine = KingAttack(5.0f);
             StartCoroutine(coroutine);
         }
         if (other.tag == "sign")
@@ -56,6 +62,14 @@ public class player : MonoBehaviour
         if (other.tag == "dungeon")
         {
             dungeonText.SetActive(true);
+        }
+        if (other.tag == "sign2")
+        {
+            sign2Text.SetActive(true);
+        }
+        if (other.tag == "garden")
+        {
+            SceneManager.LoadScene(6);
         }
     }
     
@@ -81,6 +95,10 @@ public class player : MonoBehaviour
         if (other.tag == "dungeon")
         {
             dungeonText.SetActive(false);
+        }
+        if (other.tag == "sign2")
+        {
+            sign2Text.SetActive(false);
         }
     }
 }

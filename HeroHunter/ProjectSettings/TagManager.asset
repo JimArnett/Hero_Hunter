@@ -19,6 +19,8 @@ TagManager:
   - er
   - sign
   - dungeon
+  - sign2
+  - garden
   layers:
   - Default
   - TransparentFX
