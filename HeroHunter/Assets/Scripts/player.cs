@@ -14,15 +14,20 @@ public class player : MonoBehaviour
     public GameObject dungeonText;
     public GameObject sign2Text;
     private IEnumerator coroutine;
+<<<<<<< HEAD
 
     public AudioSource laughSound;
     public AudioSource laugh2Sound;
     
+=======
+    private GameObject closedDoor;
+    private GameObject openedDoor;
+>>>>>>> bc65374573fc82d683b10ba6d736366dde10b140
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        closedDoor = GameObject.FindWithTag("closed");
     }
 
     // Update is called once per frame
@@ -39,6 +44,7 @@ public class player : MonoBehaviour
         if (other.tag == "club"){
             Destroy(club);
             hasClub = true;
+            closedDoor.GetComponent<Animator>().SetTrigger("pleaseOpen");
         }
         if (other.tag == "door" && hasClub){
             SceneManager.LoadScene(1);
